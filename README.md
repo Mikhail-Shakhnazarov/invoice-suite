@@ -1,6 +1,6 @@
 # Invoice Suite
 
-A portfolio-grade invoice generation system demonstrating clean architecture, engine-first design, and platform adapters.
+Invoice Suite generates professional PDF invoices from structured data. The core engine handles validation, tax calculation, and currency formatting with zero dependencies—making it portable to any JavaScript environment. Two adapters demonstrate this: a CLI tool that renders invoices locally via Puppeteer, and a Google Workspace add-on that lets you fill out a spreadsheet and generate invoices directly into Google Drive. The project is structured as a monorepo to show how business logic can be isolated from platform I/O and tested independently.
 
 [![CI](https://github.com/Mikhail-Shakhnazarov/invoice-suite/actions/workflows/ci.yml/badge.svg)](https://github.com/Mikhail-Shakhnazarov/invoice-suite/actions/workflows/ci.yml)
 
