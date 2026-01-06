@@ -82,6 +82,9 @@ jobs:
       - name: Build packages
         run: pnpm build
 
+      - name: Install Puppeteer Chrome
+        run: pnpm --filter @invoice-suite/cli-demo exec puppeteer browsers install chrome
+
       - name: Generate demo PDF
         run: pnpm demo:pdf
         env:
