@@ -72,8 +72,12 @@ jobs:
             libxdamage1 \
             libxfixes3 \
             libxrandr2 \
-            libgbm1 \
-            libasound2
+            libgbm1
+          if apt-cache show libasound2t64 >/dev/null 2>&1; then
+            sudo apt-get install -y libasound2t64
+          else
+            sudo apt-get install -y libasound2
+          fi
 
       - name: Build packages
         run: pnpm build
