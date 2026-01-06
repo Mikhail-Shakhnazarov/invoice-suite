@@ -11,7 +11,7 @@ A portfolio-grade invoice generation system demonstrating clean architecture, en
 ### Path A: Local Demo (30 seconds)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/invoice-suite
+git clone https://github.com/Mikhail-Shakhnazarov/invoice-suite
 cd invoice-suite
 pnpm install && pnpm build && pnpm demo:pdf
 ```
