@@ -215,7 +215,7 @@ pnpm demo:print
 
 ---
 
-## What This Demonstrates
+## This Demonstrates
 
 1. **Clean Architecture**: Business logic independent of I/O
 2. **Type Safety**: Comprehensive TypeScript with strict checks
