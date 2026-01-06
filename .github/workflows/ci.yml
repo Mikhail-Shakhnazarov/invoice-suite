@@ -1,0 +1,139 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Run tests
+        run: pnpm test
+
+  demo-pdf:
+    name: Demo PDF Generation
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Install Chromium dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libdrm2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxfixes3 \
+            libxrandr2 \
+            libgbm1 \
+            libasound2
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Generate demo PDF
+        run: pnpm demo:pdf
+        env:
+          PUPPETEER_ARGS: '--no-sandbox --disable-setuid-sandbox'
+
+      - name: Verify PDF was generated
+        run: |
+          ls -la packages/cli-demo/out/
+          test -f packages/cli-demo/out/Invoice_*.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-invoice-pdf
+          path: packages/cli-demo/out/*.pdf
+          retention-days: 7
+
+  build-addon:
+    name: Build Google Add-on
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build engine
+        run: pnpm --filter @invoice-suite/engine build
+
+      - name: Build Google Add-on bundle
+        run: pnpm --filter @invoice-suite/google-addon build
+
+      - name: Verify bundle was created
+        run: |
+          ls -la packages/google-addon/dist/
+          test -f packages/google-addon/dist/Code.js
+          test -f packages/google-addon/dist/appsscript.json
+          test -f packages/google-addon/dist/sidebar.html
+
+      - name: Upload bundle artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-addon-bundle
+          path: packages/google-addon/dist/
+          retention-days: 7

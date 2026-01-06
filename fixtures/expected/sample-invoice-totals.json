@@ -1,0 +1,8 @@
+{
+  "description": "Expected computed values for sample-invoice.json",
+  "lineItemAmounts": [1500.00, 3000.00, 234.50],
+  "subtotal": 4734.50,
+  "taxAmount": 899.555,
+  "total": 5634.055,
+  "notes": "Tax amount and total maintain full precision. Rounding to 2 decimals happens at display time."
+}

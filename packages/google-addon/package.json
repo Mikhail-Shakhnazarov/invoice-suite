@@ -1,0 +1,34 @@
+{
+  "name": "@invoice-suite/google-addon",
+  "version": "0.1.0",
+  "description": "Google Workspace add-on for invoice generation from Sheets",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "build:watch": "node esbuild.config.js --watch",
+    "clean": "rm -rf dist",
+    "push": "npm run build && clasp push",
+    "push:watch": "npm run build && clasp push --watch",
+    "open": "clasp open",
+    "logs": "clasp logs",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "invoice",
+    "google-sheets",
+    "google-docs",
+    "apps-script"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@invoice-suite/engine": "workspace:*"
+  },
+  "devDependencies": {
+    "@google/clasp": "^2.4.2",
+    "@types/google-apps-script": "^1.0.83",
+    "esbuild": "^0.19.11",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}

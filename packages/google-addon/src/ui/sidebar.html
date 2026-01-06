@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    /* Base styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Google Sans', Roboto, Arial, sans-serif;
+      font-size: 13px;
+      margin: 0;
+      padding: 16px;
+      color: #202124;
+      background: #fff;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #dadce0;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 4px 0;
+      color: #2c3e50;
+    }
+
+    .header p {
+      margin: 0;
+      color: #5f6368;
+      font-size: 12px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #dadce0;
+      margin-bottom: 16px;
+    }
+
+    .tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 13px;
+      color: #5f6368;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+    }
+
+    .tab:hover {
+      color: #202124;
+    }
+
+    .tab.active {
+      color: #1a73e8;
+      border-bottom-color: #1a73e8;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Preview section */
+    .preview {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    .preview-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .preview-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .preview-label {
+      color: #5f6368;
+    }
+
+    .preview-value {
+      font-weight: 500;
+      text-align: right;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary {
+      background: #1a73e8;
+      color: white;
+      width: 100%;
+    }
+
+    .btn-primary:hover {
+      background: #1557b0;
+    }
+
+    .btn-primary:disabled {
+      background: #dadce0;
+      cursor: not-allowed;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #1a73e8;
+      border: 1px solid #dadce0;
+    }
+
+    .btn-secondary:hover {
+      background: #f8f9fa;
+    }
+
+    /* Form elements */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #202124;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #1a73e8;
+    }
+
+    .form-group textarea {
+      min-height: 60px;
+      resize: vertical;
+    }
+
+    .form-group .hint {
+      font-size: 11px;
+      color: #5f6368;
+      margin-top: 4px;
+    }
+
+    /* Status messages */
+    .status {
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+
+    .status.success {
+      background: #e6f4ea;
+      color: #137333;
+    }
+
+    .status.error {
+      background: #fce8e6;
+      color: #c5221f;
+    }
+
+    .status.info {
+      background: #e8f0fe;
+      color: #1967d2;
+    }
+
+    .status a {
+      color: inherit;
+      font-weight: 500;
+    }
+
+    /* Error list */
+    .error-list {
+      margin: 8px 0 0 0;
+      padding-left: 20px;
+    }
+
+    .error-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Loading state */
+    .loading {
+      text-align: center;
+      padding: 20px;
+      color: #5f6368;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #dadce0;
+      border-top-color: #1a73e8;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Section headers */
+    .section-header {
+      font-size: 12px;
+      font-weight: 500;
+      color: #5f6368;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 20px 0 12px 0;
+    }
+
+    /* Actions row */
+    .actions {
+      margin-top: 16px;
+    }
+
+    /* Hidden */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Invoice Suite</h1>
+    <p>Generate professional PDF invoices</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="generate">Generate</button>
+    <button class="tab" data-tab="settings">Settings</button>
+  </div>
+
+  <!-- Generate Tab -->
+  <div id="generate-tab" class="tab-content active">
+    <div id="status-container"></div>
+
+    <div id="preview-section" class="preview">
+      <div class="preview-row">
+        <span class="preview-label">Invoice #</span>
+        <span class="preview-value" id="preview-number">-</span>
+      </div>
+      <div class="preview-row">
+        <span class="preview-label">Client</span>
+        <span class="preview-value" id="preview-client">-</span>
+      </div>
+      <div class="preview-row">
+        <span class="preview-label">Line Items</span>
+        <span class="preview-value" id="preview-items">-</span>
+      </div>
+      <div class="preview-row">
+        <span class="preview-label">Currency</span>
+        <span class="preview-value" id="preview-currency">-</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button id="generate-btn" class="btn btn-primary" onclick="generateInvoice()">
+        Generate Invoice
+      </button>
+    </div>
+
+    <div id="config-warning" class="status info hidden">
+      Please configure your business details and template in Settings before generating invoices.
+    </div>
+  </div>
+
+  <!-- Settings Tab -->
+  <div id="settings-tab" class="tab-content">
+    <div id="settings-status"></div>
+
+    <div class="section-header">Business Details</div>
+
+    <div class="form-group">
+      <label for="business-name">Business Name *</label>
+      <input type="text" id="business-name" placeholder="Your Company Name">
+    </div>
+
+    <div class="form-group">
+      <label for="business-address">Address *</label>
+      <textarea id="business-address" placeholder="123 Street&#10;City, 12345&#10;Country"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="business-email">Email *</label>
+      <input type="email" id="business-email" placeholder="invoices@company.com">
+    </div>
+
+    <div class="form-group">
+      <label for="business-phone">Phone</label>
+      <input type="text" id="business-phone" placeholder="+1 234 567 890">
+    </div>
+
+    <div class="form-group">
+      <label for="business-tax-id">Tax ID</label>
+      <input type="text" id="business-tax-id" placeholder="VAT/EIN number">
+    </div>
+
+    <div class="section-header">Template & Output</div>
+
+    <div class="form-group">
+      <label for="template-id">Template Document ID *</label>
+      <input type="text" id="template-id" placeholder="1abc...xyz">
+      <div class="hint">The ID from your Google Docs template URL</div>
+    </div>
+
+    <div class="form-group">
+      <label for="output-folder">Output Folder ID</label>
+      <input type="text" id="output-folder" placeholder="(optional - uses Drive root)">
+      <div class="hint">Leave empty to save PDFs to Drive root</div>
+    </div>
+
+    <div class="form-group">
+      <label for="filename-pattern">Filename Pattern</label>
+      <input type="text" id="filename-pattern" placeholder="Invoice_{{invoiceNumber}}_{{clientName}}">
+      <div class="hint">Use {{invoiceNumber}}, {{clientName}}, {{date}}</div>
+    </div>
+
+    <div class="section-header">Defaults</div>
+
+    <div class="form-group">
+      <label for="default-currency">Default Currency</label>
+      <select id="default-currency">
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+        <option value="GBP">GBP</option>
+        <option value="CHF">CHF</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="default-tax-rate">Default Tax Rate (%)</label>
+      <input type="number" id="default-tax-rate" placeholder="19" min="0" max="100" step="0.1">
+    </div>
+
+    <div class="form-group">
+      <label for="payment-terms">Payment Terms / Notes</label>
+      <textarea id="payment-terms" placeholder="Payment due within 30 days.&#10;Bank: ..."></textarea>
+    </div>
+
+    <div class="actions">
+      <button class="btn btn-primary" onclick="saveSettings()">Save Settings</button>
+    </div>
+  </div>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab + '-tab').classList.add('active');
+      });
+    });
+
+    // Show status message
+    function showStatus(containerId, message, type) {
+      const container = document.getElementById(containerId);
+      container.innerHTML = `<div class="status ${type}">${message}</div>`;
+    }
+
+    function clearStatus(containerId) {
+      document.getElementById(containerId).innerHTML = '';
+    }
+
+    // Load preview data
+    function loadPreview() {
+      google.script.run
+        .withSuccessHandler(function(data) {
+          document.getElementById('preview-number').textContent = data.invoiceNumber;
+          document.getElementById('preview-client').textContent = data.clientName;
+          document.getElementById('preview-items').textContent = data.lineItemCount;
+          document.getElementById('preview-currency').textContent = data.currency;
+        })
+        .withFailureHandler(function(error) {
+          console.error('Failed to load preview:', error);
+        })
+        .getSheetPreview();
+    }
+
+    // Load settings
+    function loadSettings() {
+      google.script.run
+        .withSuccessHandler(function(config) {
+          // Business
+          document.getElementById('business-name').value = config.business.name || '';
+          document.getElementById('business-address').value = config.business.address || '';
+          document.getElementById('business-email').value = config.business.email || '';
+          document.getElementById('business-phone').value = config.business.phone || '';
+          document.getElementById('business-tax-id').value = config.business.taxId || '';
+
+          // Template
+          document.getElementById('template-id').value = config.templateDocId || '';
+          document.getElementById('output-folder').value = config.outputFolderId || '';
+          document.getElementById('filename-pattern').value = config.fileNamePattern || '';
+
+          // Defaults
+          document.getElementById('default-currency').value = config.defaults.currency || 'EUR';
+          document.getElementById('default-tax-rate').value = config.defaults.taxRate ? (config.defaults.taxRate * 100) : '';
+          document.getElementById('payment-terms').value = config.defaults.paymentTerms || '';
+
+          // Check if config is complete
+          checkConfigComplete(config);
+        })
+        .withFailureHandler(function(error) {
+          showStatus('settings-status', 'Failed to load settings: ' + error.message, 'error');
+        })
+        .loadSettings();
+    }
+
+    // Check if configuration is complete
+    function checkConfigComplete(config) {
+      const missing = [];
+      if (!config.business.name) missing.push('Business Name');
+      if (!config.business.address) missing.push('Business Address');
+      if (!config.business.email) missing.push('Business Email');
+      if (!config.templateDocId) missing.push('Template Document ID');
+
+      const warning = document.getElementById('config-warning');
+      const generateBtn = document.getElementById('generate-btn');
+
+      if (missing.length > 0) {
+        warning.classList.remove('hidden');
+        generateBtn.disabled = true;
+      } else {
+        warning.classList.add('hidden');
+        generateBtn.disabled = false;
+      }
+    }
+
+    // Save settings
+    function saveSettings() {
+      const taxRateValue = document.getElementById('default-tax-rate').value;
+
+      const config = {
+        business: {
+          name: document.getElementById('business-name').value,
+          address: document.getElementById('business-address').value,
+          email: document.getElementById('business-email').value,
+          phone: document.getElementById('business-phone').value || undefined,
+          taxId: document.getElementById('business-tax-id').value || undefined,
+        },
+        templateDocId: document.getElementById('template-id').value,
+        outputFolderId: document.getElementById('output-folder').value || undefined,
+        fileNamePattern: document.getElementById('filename-pattern').value || 'Invoice_{{invoiceNumber}}_{{clientName}}',
+        defaults: {
+          currency: document.getElementById('default-currency').value,
+          taxRate: taxRateValue ? parseFloat(taxRateValue) / 100 : undefined,
+          paymentTerms: document.getElementById('payment-terms').value || undefined,
+        },
+      };
+
+      google.script.run
+        .withSuccessHandler(function() {
+          showStatus('settings-status', 'Settings saved successfully!', 'success');
+          checkConfigComplete(config);
+        })
+        .withFailureHandler(function(error) {
+          showStatus('settings-status', 'Failed to save: ' + error.message, 'error');
+        })
+        .saveSettings(config);
+    }
+
+    // Generate invoice
+    function generateInvoice() {
+      const btn = document.getElementById('generate-btn');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>Generating...';
+      clearStatus('status-container');
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+
+          if (result.success) {
+            showStatus('status-container',
+              `✓ Invoice generated!<br><a href="${result.pdfUrl}" target="_blank">Open PDF: ${result.pdfName}</a>`,
+              'success'
+            );
+          } else {
+            let errorHtml = result.error;
+            if (result.issues && result.issues.length > 0) {
+              errorHtml += '<ul class="error-list">';
+              result.issues.forEach(function(issue) {
+                errorHtml += `<li><strong>${issue.cell}</strong>: ${issue.message}</li>`;
+              });
+              errorHtml += '</ul>';
+            }
+            showStatus('status-container', errorHtml, 'error');
+          }
+        })
+        .withFailureHandler(function(error) {
+          btn.disabled = false;
+          btn.textContent = originalText;
+          showStatus('status-container', 'Error: ' + error.message, 'error');
+        })
+        .generateInvoice();
+    }
+
+    // Initialize
+    loadPreview();
+    loadSettings();
+  </script>
+</body>
+</html>

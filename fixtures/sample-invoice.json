@@ -1,0 +1,41 @@
+{
+  "business": {
+    "name": "Freelance Dev Co.",
+    "address": "123 Code Street\nBerlin, 10115\nGermany",
+    "email": "invoices@freelance.dev",
+    "phone": "+49 30 12345678",
+    "taxId": "DE123456789"
+  },
+  "client": {
+    "name": "Acme GmbH",
+    "address": "Musterstraße 1\n10115 Berlin\nGermany",
+    "email": "billing@acme.de"
+  },
+  "header": {
+    "invoiceNumber": "INV-2025-0042",
+    "issueDate": "2025-01-05",
+    "dueDate": "2025-02-04",
+    "currency": "EUR",
+    "taxRate": 0.19,
+    "notes": "Payment due within 30 days.\nBank: IBAN DE89 3704 0044 0532 0130 00"
+  },
+  "lineItems": [
+    {
+      "description": "Consulting services - January 2025",
+      "quantity": 10,
+      "unitPrice": 150.00,
+      "unit": "hours"
+    },
+    {
+      "description": "Development work - API integration",
+      "quantity": 25,
+      "unitPrice": 120.00,
+      "unit": "hours"
+    },
+    {
+      "description": "Travel expenses - client meeting",
+      "quantity": 1,
+      "unitPrice": 234.50
+    }
+  ]
+}

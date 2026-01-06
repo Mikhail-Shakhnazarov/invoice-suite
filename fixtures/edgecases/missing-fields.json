@@ -1,0 +1,13 @@
+{
+  "_description": "Invoice with missing required fields - should fail validation",
+  "business": {
+    "name": "Test Business"
+  },
+  "client": {
+    "address": "456 St"
+  },
+  "header": {
+    "currency": "EUR"
+  },
+  "lineItems": []
+}

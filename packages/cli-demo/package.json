@@ -1,0 +1,33 @@
+{
+  "name": "@invoice-suite/cli-demo",
+  "version": "0.1.0",
+  "description": "CLI demo for invoice generation - JSON to PDF without Google dependencies",
+  "type": "module",
+  "main": "./dist/cli.js",
+  "bin": {
+    "invoice-pdf": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist out",
+    "demo:pdf": "node dist/cli.js --input ../../fixtures/sample-invoice.json --out ./out",
+    "demo:print": "node dist/cli.js --input ../../fixtures/sample-invoice.json --print",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "invoice",
+    "pdf",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@invoice-suite/engine": "workspace:*",
+    "puppeteer": "^21.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0",
+    "@types/node": "^20.11.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "_description": "Minimal valid invoice with single line item",
+  "business": {
+    "name": "Solo Contractor",
+    "address": "1 Minimal St",
+    "email": "solo@example.com"
+  },
+  "client": {
+    "name": "Simple Client",
+    "address": "2 Basic Ave"
+  },
+  "header": {
+    "invoiceNumber": "INV-SINGLE-001",
+    "issueDate": "2025-01-15",
+    "currency": "USD",
+    "taxRate": 0.08
+  },
+  "lineItems": [
+    {
+      "description": "One-time project",
+      "quantity": 1,
+      "unitPrice": 5000
+    }
+  ],
+  "_expected": {
+    "subtotal": 5000,
+    "taxAmount": 400,
+    "total": 5400
+  }
+}

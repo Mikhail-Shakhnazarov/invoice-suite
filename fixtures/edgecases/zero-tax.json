@@ -1,0 +1,29 @@
+{
+  "_description": "Invoice with no tax rate - taxAmount should be 0",
+  "business": {
+    "name": "Tax-Free Services Ltd",
+    "address": "100 Zero Tax Lane\nLondon",
+    "email": "invoice@taxfree.com"
+  },
+  "client": {
+    "name": "International Client",
+    "address": "Overseas Address"
+  },
+  "header": {
+    "invoiceNumber": "INV-NOTAX-001",
+    "issueDate": "2025-01-10",
+    "currency": "GBP"
+  },
+  "lineItems": [
+    {
+      "description": "Exported service (zero-rated)",
+      "quantity": 5,
+      "unitPrice": 200
+    }
+  ],
+  "_expected": {
+    "subtotal": 1000,
+    "taxAmount": 0,
+    "total": 1000
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "invoice-suite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Invoice generation engine with CLI demo and Google Workspace add-on",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:engine": "pnpm --filter @invoice-suite/engine build",
+    "build:cli": "pnpm --filter @invoice-suite/cli-demo build",
+    "build:addon": "pnpm --filter @invoice-suite/google-addon build",
+    "test": "pnpm -r test",
+    "test:engine": "pnpm --filter @invoice-suite/engine test",
+    "test:cli": "pnpm --filter @invoice-suite/cli-demo test",
+    "test:addon": "pnpm --filter @invoice-suite/google-addon test",
+    "lint": "pnpm -r lint",
+    "clean": "pnpm -r clean",
+    "demo:pdf": "pnpm build:engine && pnpm build:cli && pnpm --filter @invoice-suite/cli-demo demo:pdf",
+    "demo:print": "pnpm build:engine && pnpm build:cli && pnpm --filter @invoice-suite/cli-demo demo:print",
+    "addon:push": "pnpm build:engine && pnpm --filter @invoice-suite/google-addon push"
+  },
+  "keywords": [
+    "invoice",
+    "pdf",
+    "google-workspace",
+    "apps-script",
+    "typescript",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@8.15.0"
+}
