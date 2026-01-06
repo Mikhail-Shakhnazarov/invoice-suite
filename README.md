@@ -38,16 +38,16 @@ Then: Open the created Sheet → Extensions → Invoice Suite
 │                        invoice-suite                            │
 ├─────────────────────────────────────────────────────────────────┤
 │  packages/                                                      │
-│  ├── invoice-engine/     Pure TS • Zero deps • Portable        │
-│  │   ├── validate.ts     Type checking, required fields        │
-│  │   ├── compute.ts      Line totals, tax, final amount        │
-│  │   └── format.ts       Currency/date per locale              │
+│  ├── invoice-engine/     Pure TS • Zero deps • Portable         │
+│  │   ├── validate.ts     Type checking, required fields         │
+│  │   ├── compute.ts      Line totals, tax, final amount         │
+│  │   └── format.ts       Currency/date per locale               │
 │  │                                                              │
-│  ├── cli-demo/           JSON → HTML → PDF (Puppeteer)         │
-│  │   └── Demonstrates engine without Google                    │
+│  ├── cli-demo/           JSON → HTML → PDF (Puppeteer)          │
+│  │   └── Demonstrates engine without Google                     │
 │  │                                                              │
-│  └── google-addon/       Sheet → Engine → Docs → PDF → Drive   │
-│      └── Production-ready Workspace integration                │
+│  └── google-addon/       Sheet → Engine → Docs → PDF → Drive    │
+│      └── Production-ready Workspace integration                 │
 ├─────────────────────────────────────────────────────────────────┤
 │  fixtures/               Shared test data                       │
 │  docs/                   Schema, templates, deployment          │
