@@ -39,3 +39,6 @@ packages/cli-demo/out/
 # Temp files
 *.tmp
 *.temp
+
+# Exclude marketplace doc
+/docs/MARKETPLACE.md
