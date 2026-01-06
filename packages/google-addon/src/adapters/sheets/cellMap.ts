@@ -32,7 +32,6 @@ export const LINE_ITEMS_CONFIG = {
     description: 0, // A
     quantity: 1,    // B
     unitPrice: 2,   // C
-    amount: 3,      // D (formula, not read)
   },
 };
 
