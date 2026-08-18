@@ -2,7 +2,7 @@
 
 © 2026 Mikhail Shakhnazarov. All rights reserved.
 
-**Standing:** ACTIVE ARCHEOLOGY — fourth-site sparse-history pressure compiled; four bounded findings and a four-site transfer delta are durable. Cross-site placement/propagation is now resolved.
+**Standing:** ACTIVE ARCHEOLOGY — fourth-site sparse-history pressure remains locally complete; fifth-site native-formal pressure has further recompiled the shared Estate method. Cross-site placement/propagation is resolved.
 
 ## Exact basis
 
@@ -18,10 +18,11 @@ Current Estate method authority:
 
 ```text
 Mikhail-Shakhnazarov/home
-main@955eb7dc30aec0de7a4fc98b77e01193377963f6
+main@fbaeb9a40ae4b5066a2d05f0d844ab3967625b80
 
 private corpus/methodology/method_archaeology.md
 → private corpus/methodology/method_archaeology_addendum_2026-08-18_four_site_sparse_history.md
+→ private corpus/methodology/method_archaeology_addendum_2026-08-18_native_formal_history.md
 ```
 
 Home owns the denaturalized shared method, not Invoice Suite history.
@@ -135,7 +136,7 @@ GENEALOGICAL NEGATIVE KNOWLEDGE
 
 Sites A–C strongly preserve both. Site D strongly preserves the first and leaves the second largely UNKNOWN.
 
-## Four-site method changes
+## Four-site method changes retained
 
 ### Recover relations, not a documentary schema
 
@@ -190,7 +191,7 @@ LEFT / ARCHIVE BOUNDARY
     how far backward can formation claims be supported?
 ```
 
-### Split challenge routes
+### Split challenge routes — four-site form
 
 ```text
 GENEALOGICAL CHALLENGE
@@ -200,58 +201,112 @@ EXECUTABLE CHALLENGE
     perturb current guard and test current consequence
 ```
 
-The latter can remain available when the former is lost.
+Site E later adds a third route.
 
 ### Preserve `NOT APPLICABLE`
 
 Site D does not contain source-native analogues of Sites A–C's richer admission/authority machinery. That absence is transfer evidence, not a reason to invent analogous objects.
 
+## Fifth-site native-formal change
+
+`transfer/002_native_formal_fifth_site_pressure.md` records the Site-E delta.
+
+Site E is `Mikhail-Shakhnazarov/the_challenge`, whose strongest historical service includes formal derivations, ordered solver/search elimination, corrections and executable finite checking.
+
+### Proof force is implication-directed
+
+A checker/verifier/proof artifact has force through the proposition it establishes under explicit assumptions and derivation. Executability alone does not state that proposition.
+
+### Proof-bearing evidence can be distributed
+
+Formal standing may be carried jointly by source semantics, a transformed formal object, derivation, checker/proof, and explicit limits/falsifiers.
+
+### Formal correction can replace the searched object
+
+Site E corrects an eight-pair dependency reconstruction to five pairs from exact source semantics. The correction changes the downstream search object, not merely its prose description.
+
+### Local proof standing != higher-order object admission
+
+Strong formal branch eliminations coexist with `Research-object standing: none`. Proof strength is level-specific.
+
+### Challenge routes now have three forms
+
+```text
+GENEALOGICAL CHALLENGE
+    reopen historical evidence/disposition
+
+EXECUTABLE CHALLENGE
+    perturb current mechanism and test current consequence
+
+DERIVATIONAL / FORMAL CHALLENGE
+    rederive the bridge from source assumptions/formal semantics
+    to the proposition a proof/checker is claimed to establish
+```
+
+This matters to Site D because an executable rerun cannot establish that the derivation selecting the checked subsystem was correct.
+
+### Historical service can cross repositories
+
+Site E intentionally places current research-programme standing in Home while retaining domain-native proving history in the source repository. Current historical service can therefore be an explicit authority graph across repositories.
+
 ## Cross-site transfer standing
 
-`transfer/001_four_site_method_pressure.md` compiles the delta against the prior three-site method.
+`transfer/001_four_site_method_pressure.md` compiles the Site-D delta against the prior three-site method. `transfer/002_native_formal_fifth_site_pressure.md` records the later Site-E pressure.
 
-Fourth-site results:
+Current five-site standing:
 
 ```text
 STRENGTHENED
     inferential ceiling per relation
     chronology/topology != causality/authority
     source-native reconstruction
+    evidence/proof strength != higher-order standing
 
-NEW PORTABLE RELATIONS
+SITE-D PORTABLE RELATIONS
     archive horizon != formation origin
     current necessity != historical trigger
     machine-state comparison under sparse history
     operative != genealogical negative knowledge
-    executable != genealogical challenge
+
+SITE-E PORTABLE RELATIONS
+    proof force is implication-directed
+    proof-bearing evidence may be distributed
+    formal correction can replace downstream search object
+    derivational/formal challenge is distinct
+    historical service may cross repository owners
 
 NOT APPLICABLE AT SITE D
     separate semantic admission authority
     typed authority-bearing identity
     enacted non-owning admission gate
+    native-formal proof-object relations themselves
 ```
 
-The shared-owner condition is now resolved: current portable method authority lives in Home.
+The shared-owner condition remains resolved: current portable method authority lives in Home.
 
 ## Propagation standing
 
-The four-site/Home route has been propagated to the prior archaeology sites without rewriting their local findings:
+The five-site/Home route is now represented across the archaeology federation without rewriting source-local findings or source authorities:
 
 ```text
 FORMATIVE
-    admitted transfer-currentness repair on main
+    admitted current-transfer route on main
 
 SITE B — research_SF_pol_ide
-    admitted four-site recompile on main
+    admitted five-site recompile on main
 
 SITE A — coding_harness_private
-    branch-local four-site recompile; retired main untouched
+    branch-local five-site recompile; retired main untouched
 
 SITE C — build_abstract_consequence
-    branch-local four-site recompile; build authority untouched
-```
+    branch-local five-site recompile; build authority untouched
 
-This closes the previous federation-currentness front.
+SITE D — invoice-suite
+    branch-local current projection; product master untouched
+
+SITE E — the_challenge
+    branch-local native-formal source archaeology; research programme remains in Home
+```
 
 ## Remaining weak edges
 
@@ -261,7 +316,8 @@ conflicting multi-contributor rationale
 autogenerated commit-message history at scale
 external-service authority / ephemeral review
 highly distributed non-Git formation
-native formal-proof-dominant history
+authoritative current historical service that is itself wrong or misleading
+formal artifacts whose upstream prover/checker semantics later change
 fresh-runtime archaeology economics
 ```
 
@@ -279,9 +335,10 @@ These are distinct evidence classes. Do not simulate them inside Invoice Suite m
 ```text
 README.md
 → CURRENT.md
-→ transfer/001_four_site_method_pressure.md when cross-site method genealogy matters
+→ transfer/002_native_formal_fifth_site_pressure.md for current fifth-site standing
+→ transfer/001_four_site_method_pressure.md when Site-D genealogy matters
 → findings/001...004 only as needed
 → process/OBSERVATIONS.md
 → SOURCE_LEDGER.md for exact Site-D traces
-→ Home parent + current addendum for Estate-wide method execution
+→ Home parent + sparse-history addendum + native-formal addendum for Estate-wide method execution
 ```
