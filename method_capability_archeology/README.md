@@ -10,7 +10,7 @@
 
 Pressure the Estate's standing-reconstruction method against a repository that lacks the rich current-state, adjudication, work-item and gate surfaces present in the first three archaeology sites.
 
-The fourth-site question is not whether ordinary Git history can be made to look like a governed research institution. It is what can still be reconstructed safely when surviving traces are mostly:
+The Site-D question is what can still be reconstructed safely when surviving traces are mostly:
 
 ```text
 current code / config / tests
@@ -46,17 +46,18 @@ Archaeology may reconstruct state transitions and supported design/repair relati
 
 ## Current Estate method route
 
-Site D changed the shared method enough to earn a Home causal amendment. Current Estate-wide method execution should therefore use:
+Site D changed the shared method through sparse-history pressure. Site E (`the_challenge`) later added native formal/search/verifier pressure. Current Estate-wide method execution therefore uses:
 
 ```text
 Mikhail-Shakhnazarov/home
-main@955eb7dc30aec0de7a4fc98b77e01193377963f6
+main@fbaeb9a40ae4b5066a2d05f0d844ab3967625b80
 
 private corpus/methodology/method_archaeology.md
 → private corpus/methodology/method_archaeology_addendum_2026-08-18_four_site_sparse_history.md
+→ private corpus/methodology/method_archaeology_addendum_2026-08-18_native_formal_history.md
 ```
 
-This branch remains the source evidence for the sparse-history pressure. It is not a second shared-method owner.
+This branch remains the source evidence for Site-D sparse-history pressure. It is not a second shared-method owner.
 
 ## Evidence standing
 
@@ -84,7 +85,15 @@ The initial CI question produced four bounded findings:
 004  operative negative knowledge can survive after genealogical failure trace is lost
 ```
 
-`transfer/001_four_site_method_pressure.md` compiles the resulting method changes.
+Transfer objects:
+
+```text
+transfer/001_four_site_method_pressure.md
+    Site-D sparse-history recompile
+
+transfer/002_native_formal_fifth_site_pressure.md
+    later Site-E pressure on the shared method
+```
 
 ## Site order
 
@@ -100,7 +109,7 @@ The initial CI question produced four bounded findings:
 
 Commit messages nominate motive; they do not make an opaque diff self-explanatory. Current executable necessity does not establish historical trigger.
 
-## What transferred
+## What Site D transferred
 
 ```text
 trace bundle as interrogation relations, not mandatory fields
@@ -113,12 +122,26 @@ EXECUTABLE != GENEALOGICAL CHALLENGE
 NOT APPLICABLE as positive transfer standing
 ```
 
-## What did not transfer into Site D
+## What Site E later added
+
+```text
+proof force is implication-directed
+proof-bearing evidence may be distributed across typed artifacts
+formal correction can replace the downstream search object
+local proof standing != higher-order object admission
+DERIVATIONAL / FORMAL challenge is distinct from executable/genealogical challenge
+current historical service may cross repository owners
+```
+
+These Site-E relations are part of current Estate method standing; they are not retrofitted as local Invoice Suite findings.
+
+## What does not transfer into Site D
 
 ```text
 separate semantic admission authority
 typed authority-bearing semantic identity
 enacted non-owning semantic pressure/admission gate
+native-formal proof-object machinery
 ```
 
 Their absence should remain absence rather than being simulated with ordinary Git/CI nouns.
@@ -128,11 +151,12 @@ Their absence should remain absence rather than being simulated with ordinary Gi
 ```text
 README.md
 → CURRENT.md
-→ transfer/001_four_site_method_pressure.md for cross-site genealogy
+→ transfer/002_native_formal_fifth_site_pressure.md for current fifth-site standing
+→ transfer/001_four_site_method_pressure.md for Site-D genealogy
 → one bounded finding as needed
 → SOURCE_LEDGER.md for exact Site-D traces
 → process/OBSERVATIONS.md for sparse-history method pressure
-→ Home parent + current addendum for Estate-wide method execution
+→ Home parent + sparse-history addendum + native-formal addendum for Estate-wide method execution
 ```
 
-Do not retrofit Site-A/B/C governance nouns onto this repository.
+Do not retrofit richer governance or formal-proof nouns onto this repository where the source-native relation is absent.
