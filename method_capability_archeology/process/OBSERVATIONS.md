@@ -219,6 +219,68 @@ embedded date + independent trace
     supported chronology
 ```
 
+## IAO-014 — operative negative knowledge can outlive genealogical negative knowledge
+
+The current workflow preserves guards for package availability and browser materialization even though the exact original failures and dispositions are not recovered.
+
+This requires two relations:
+
+```text
+OPERATIVE NEGATIVE KNOWLEDGE
+    current guard/discriminator shaped by a failure class
+
+GENEALOGICAL NEGATIVE KNOWLEDGE
+    recoverable failure + disposition + alternatives + reopening basis
+```
+
+A repository may preserve the first after losing the second.
+
+Do not infer a rich historical failure narrative merely because a mature guard exists. Do not dismiss the guard as non-knowledge merely because its genealogy is missing.
+
+## IAO-015 — challengeability can survive through current perturbation after historical challenge routes disappear
+
+Sites with rich failure traces can reopen a claim by replaying original evidence/disposition.
+
+Sparse software may instead permit:
+
+```text
+remove / alter current guard
+→ execute current test/workflow surface
+→ observe whether the forbidden condition recurs
+```
+
+This is an **executable challenge** to current necessity, not a reconstruction of the original historical defect.
+
+Portable distinction:
+
+```text
+GENEALOGICAL CHALLENGE
+    reopen original basis
+
+EXECUTABLE CHALLENGE
+    perturb current guard under current basis
+```
+
+The two routes answer different questions.
+
+## IAO-016 — NOT APPLICABLE is a positive transfer result
+
+Site D lacks a separate semantic admission institution, non-owning pressure gate and authority-local identity machinery comparable to Site C.
+
+Correct transfer standing is:
+
+```text
+NOT APPLICABLE AT THIS SITE
+```
+
+not:
+
+```text
+weakly confirmed by analogy
+```
+
+A cross-site method compounds by learning where a relation does not exist as much as by accumulating recurrences.
+
 ## Current fourth-site corrections
 
 The three-site step:
@@ -235,7 +297,7 @@ else preserve trigger UNKNOWN
 and continue with bounded transition/mechanism reconstruction
 ```
 
-The history boundary also becomes explicit:
+The history boundary becomes explicit:
 
 ```text
 locate earliest surviving state
@@ -244,4 +306,13 @@ locate earliest surviving state
 → do not identify archive horizon with formation origin
 ```
 
-The method should not make causal-rationale recovery a prerequisite for every useful archaeology object, and it should not make repository inception a synthetic origin point.
+Negative knowledge becomes layered:
+
+```text
+recover current guard/discriminator
+→ separately ask whether failure genealogy survives
+→ use genealogical challenge when available
+→ otherwise use executable challenge only for current necessity
+```
+
+The method should reduce claim strength before inventing missing structure and should treat non-applicability as evidence about scope.
