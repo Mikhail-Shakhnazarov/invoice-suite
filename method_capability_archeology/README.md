@@ -46,18 +46,15 @@ Archaeology may reconstruct state transitions and supported design/repair relati
 
 ## Current Estate method route
 
-Site D changed the shared method through sparse-history pressure. Site E (`the_challenge`) later added native formal/search/verifier pressure. Current Estate-wide method execution therefore uses:
+Site D does not copy mutable Home method currentness into this branch. Resolve current portable method authority from:
 
 ```text
 Mikhail-Shakhnazarov/home
-main@fbaeb9a40ae4b5066a2d05f0d844ab3967625b80
-
-private corpus/methodology/method_archaeology.md
-→ private corpus/methodology/method_archaeology_addendum_2026-08-18_four_site_sparse_history.md
-→ private corpus/methodology/method_archaeology_addendum_2026-08-18_native_formal_history.md
+branch: main
+private corpus/methodology/README.md
 ```
 
-This branch remains the source evidence for Site-D sparse-history pressure. It is not a second shared-method owner.
+`TRANSFER_CURRENT.md` records the last verified Home basis and routes to the current method chain named there. Site-D findings and transfer objects remain source-local formation/genealogy records.
 
 ## Evidence standing
 
@@ -92,7 +89,7 @@ transfer/001_four_site_method_pressure.md
     Site-D sparse-history recompile
 
 transfer/002_native_formal_fifth_site_pressure.md
-    later Site-E pressure on the shared method
+    later Site-E pressure on the shared method at that historical cut
 ```
 
 ## Site order
@@ -122,7 +119,7 @@ EXECUTABLE != GENEALOGICAL CHALLENGE
 NOT APPLICABLE as positive transfer standing
 ```
 
-## What Site E later added
+## What Site E later added at the next transfer cut
 
 ```text
 proof force is implication-directed
@@ -133,7 +130,7 @@ DERIVATIONAL / FORMAL challenge is distinct from executable/genealogical challen
 current historical service may cross repository owners
 ```
 
-These Site-E relations are part of current Estate method standing; they are not retrofitted as local Invoice Suite findings.
+These are historical cross-site formation records. Later Estate method changes, including Site-F current-service integrity, are consumed through Home rather than copied here.
 
 ## What does not transfer into Site D
 
@@ -150,13 +147,15 @@ Their absence should remain absence rather than being simulated with ordinary Gi
 
 ```text
 README.md
-→ CURRENT.md
-→ transfer/002_native_formal_fifth_site_pressure.md for current fifth-site standing
-→ transfer/001_four_site_method_pressure.md for Site-D genealogy
+→ CURRENT.md for Site-D local/cross-site snapshot
+→ TRANSFER_CURRENT.md for current Estate method routing
+→ Home main/private corpus/methodology/README.md
+→ current method chain named there
+→ transfer/002_native_formal_fifth_site_pressure.md only when Site-E genealogy bears
+→ transfer/001_four_site_method_pressure.md only when Site-D formation bears
 → one bounded finding as needed
 → SOURCE_LEDGER.md for exact Site-D traces
 → process/OBSERVATIONS.md for sparse-history method pressure
-→ Home parent + sparse-history addendum + native-formal addendum for Estate-wide method execution
 ```
 
 Do not retrofit richer governance or formal-proof nouns onto this repository where the source-native relation is absent.
