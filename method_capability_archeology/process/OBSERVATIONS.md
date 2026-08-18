@@ -166,7 +166,60 @@ what weaker question remains answerable safely?
 
 A robust archaeology method should reduce claim strength before expanding invented structure.
 
-## Current fourth-site correction candidate
+## IAO-011 — first visible repository state may already be a formed object
+
+Invoice Suite's first commit introduces the engine, both adapters, CI, tests, docs, changelog, contribution rules and the design-decision table together.
+
+The repository therefore begins after substantial object formation has already occurred.
+
+Portable rule:
+
+```text
+FIRST COMMIT
+!=
+FORMATION ORIGIN
+```
+
+Treat the earliest surviving state as an **archive horizon**. If it already contains a coherent architecture, the pre-horizon formation pathway remains UNKNOWN unless another substrate supplies it.
+
+## IAO-012 — contemporaneous rationale can be real without being genealogy
+
+The initial README already gives engine-first/thin-adapter/monorepo rationale. That makes the rationale contemporaneous with repository inception.
+
+It still does not establish:
+
+```text
+which problem produced the choice
+which alternatives were rejected
+where the decision was first made
+```
+
+A first-state explanation can describe an already formed object accurately while remaining silent about how it formed.
+
+## IAO-013 — document dates are claims until tied to an independent chronology surface
+
+`CHANGELOG.md` labels `0.1.0` as `2025-01-05`, while the first visible commit is `2026-01-06`.
+
+Without an independently recovered tag, release, predecessor repository or other dated trace, archaeology must preserve both possibilities among others:
+
+```text
+real pre-Git project/release history
+metadata/date error
+```
+
+Neither can be promoted from the document date alone.
+
+Portable rule:
+
+```text
+embedded date
+    observed metadata
+
+embedded date + independent trace
+    supported chronology
+```
+
+## Current fourth-site corrections
 
 The three-site step:
 
@@ -174,7 +227,7 @@ The three-site step:
 recover pressure/input/failure
 ```
 
-should become:
+becomes:
 
 ```text
 recover pressure/input/failure if surviving trace supports it
@@ -182,4 +235,13 @@ else preserve trigger UNKNOWN
 and continue with bounded transition/mechanism reconstruction
 ```
 
-The method should not make causal-rationale recovery a prerequisite for every useful archaeology object.
+The history boundary also becomes explicit:
+
+```text
+locate earliest surviving state
+→ determine whether it is already formed
+→ mark archive horizon
+→ do not identify archive horizon with formation origin
+```
+
+The method should not make causal-rationale recovery a prerequisite for every useful archaeology object, and it should not make repository inception a synthetic origin point.
