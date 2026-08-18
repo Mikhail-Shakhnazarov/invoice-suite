@@ -2,7 +2,7 @@
 
 © 2026 Mikhail Shakhnazarov. All rights reserved.
 
-**Standing:** ACTIVE ARCHEOLOGY — fourth-site sparse-history pressure formed; three bounded findings now establish graceful degradation and an archive horizon.
+**Standing:** ACTIVE ARCHEOLOGY — fourth-site sparse-history pressure compiled; four bounded findings and a four-site transfer delta are durable.
 
 ## Exact basis
 
@@ -16,68 +16,51 @@ The archaeology remains branch-local and non-owning. It does not modify Invoice 
 
 ## Why this site matters
 
-The first three archaeology sites preserve unusually rich durable state. Invoice Suite is ordinary software history: polished current docs, code/tests/CI, terse commits, and no explicit current authority map beyond Git/default branch.
+The first three archaeology sites preserve unusually rich durable state. Invoice Suite supplies a different substrate: polished current docs, code/tests/CI, terse commits, and no explicit current authority map beyond Git/default branch.
 
-It pressures two hidden assumptions in the compiled method:
+It falsifies or narrows three latent assumptions:
 
 ```text
 A. useful archaeology requires rich rationale/predecessor records
 B. repository inception is close enough to formation origin
+C. operative negative knowledge requires a preserved deep failure genealogy
 ```
 
-Both are false here.
+## Findings
 
-## Finding 001 — sparse CI history
+### 001 — sparse CI repair
 
-Question:
-
-> How did browser-dependent PDF generation become runnable in CI, and what can surviving traces establish about the repairs?
-
-Current workflow requires Puppeteer Chrome before CLI tests and before demo PDF generation. Current CLI smoke tests invoke PDF generation directly, so browser availability is a real test dependency.
-
-Recovered transition chain:
+Browser-dependent PDF execution became explicit through a short repair chain:
 
 ```text
-8d40e58  Update ci.yml
-    workflow trigger main -> master
-
-e288f55  Fix CI deps on ubuntu-latest
-    libasound2t64 availability check / libasound2 fallback
-
-14ec4da  fixed Github workflow incompatibility
-    CLI package Puppeteer 21 -> 24
-    package-local lockfile moves to Puppeteer 24
-
-6d54bc3  github workflow fix
-    workspace root lock reconciled Puppeteer 21 -> 24
-
-83d7477  Install Chrome for demo PDF in CI
-    explicit browser materialization before demo generation
-
-922ceb6  Install Chrome for CLI tests in CI
-    explicit browser materialization before test suite
+8d40e58  trigger main -> master
+e288f55  libasound2t64/libasound2 compatibility guard
+14ec4da  CLI Puppeteer 21 -> 24
+6d54bc3  workspace root lock reconciled to Puppeteer 24
+83d7477  Chrome install before demo PDF
+922ceb6  Chrome install before CLI tests
 ```
 
-Strongly recoverable:
+Current tests call PDF generation directly. The browser dependency is therefore currently real.
+
+Recovered strongly:
 
 ```text
-current required behavior
-exact configuration changes
-manifest/lockfile mismatch and reconciliation
-browser dependency in tests
-current survivor
+exact transitions
+current mechanism
+parallel machine-state mismatch/reconciliation
+current executable necessity
 ```
 
-Weak/unavailable:
+Unrecovered:
 
 ```text
-exact failing Actions logs
-exact error messages
-which commits reacted to failed runs vs proactive inspection
-private rationale for Puppeteer upgrade
+exact failed Actions run/error
+reactive vs proactive diagnosis
+private Puppeteer-upgrade rationale
 ```
 
-Method correction:
+Result:
 
 ```text
 transition/mechanism confidence
@@ -85,34 +68,15 @@ can exceed
 trigger/rationale confidence
 ```
 
-A missing rationale does not make the event unknowable. A visible repair does not make its motivating failure known.
+### 002 — design rationale is not design genealogy
 
-## Finding 002 — initial architecture rationale is not formation genealogy
+The first commit already introduces engine, CLI adapter, Google adapter, CI, docs, fixtures, workspace structure, architecture diagram and explicit design-decision table.
 
-Current README describes engine-first business logic, thin platform adapters, monorepo organization, strict TypeScript and zero runtime dependencies in the engine.
+Current engine-first/thin-adapter rationale is therefore contemporaneous with repository inception. Git history does not show the architecture being selected from predecessors.
 
-The first commit already introduces:
+### 003 — archive horizon
 
-```text
-README + architecture diagram + design-decision table
-CHANGELOG
-CONTRIBUTING
-CI
-invoice engine
-CLI adapter
-Google adapter
-fixtures
-docs
-workspace/package structure
-```
-
-Later README edits preserve the same architecture while changing presentation/framing.
-
-Therefore current design rationale is contemporaneous with repository inception, but repository history does not show the architecture being selected from predecessors.
-
-## Finding 003 — archive horizon
-
-The first visible commit is:
+First visible repository state:
 
 ```text
 90c99ec7765d185ff9202e9490de1ccbd03d4db3
@@ -120,9 +84,7 @@ Initial commit
 2026-01-06T12:08:06Z
 ```
 
-It is already a coherent, formed product object.
-
-Correct boundary:
+It is already a formed object.
 
 ```text
 FIRST VISIBLE REPOSITORY STATE
@@ -133,38 +95,47 @@ FIRST VISIBLE REPOSITORY STATE
 FORMATION ORIGIN
 ```
 
-Pre-repository questions remain UNKNOWN unless another substrate is found:
+Pre-repository design decisions, alternatives and source tree remain UNKNOWN unless another substrate appears.
+
+`CHANGELOG.md` labels `0.1.0` as `2025-01-05`. No independent tag/release/predecessor trace has been recovered through the available routes, so the embedded date remains document metadata rather than verified chronology.
+
+### 004 — operative negative knowledge can outlive its genealogy
+
+Current CI preserves failure-sensitive guards:
 
 ```text
-where engine-first was first conceived
-which alternatives were rejected
-whether predecessor code existed
-what decision pressure selected the architecture
-whether the initial commit came from another local/private tree
+libasound2t64-or-libasound2 branch
+workspace lock reconciliation
+explicit Puppeteer browser materialization
 ```
 
-`CHANGELOG.md` labels `0.1.0` as `2025-01-05`, one year before the first visible Git commit. No independent tag/release/predecessor trace has been recovered through the available routes, so that date remains document metadata rather than verified chronology.
+The searched repository surfaces do not preserve the exact failure, disposition, rejected alternatives or historical reopening condition.
 
-## Fourth-site method corrections
-
-The three-site method now degrades safely under sparse history.
-
-### 1. Recover what survives, not the schema expected
+Four-site correction:
 
 ```text
-rich site
-    predecessor + pressure + transition + interpretation + successor + current survivor
+OPERATIVE NEGATIVE KNOWLEDGE
+    current guard/discriminator shaped by a failure class
 
-sparse site
-    current survivor + exact diff + machine-state relation
-    with rationale/trigger UNKNOWN where absent
+GENEALOGICAL NEGATIVE KNOWLEDGE
+    recoverable failure + disposition + alternatives + reopening basis
 ```
 
-The trace bundle is a menu of relations to recover, not a mandatory documentary template.
+Sites A–C strongly preserve both. Site D strongly preserves the first and leaves the second largely UNKNOWN.
 
-### 2. Split confidence by relation
+## Four-site method changes
 
-One finding may contain:
+### Recover relations, not a documentary schema
+
+```text
+ask for predecessor / pressure / transition / interpretation /
+disposition / successor / current survivor
+→ recover only what survives
+→ assign standing per relation
+→ weaken the claim before inventing missing structure
+```
+
+### Split confidence inside one finding
 
 ```text
 OBSERVED transition
@@ -172,67 +143,108 @@ SUPPORTED INFERENCE repair relation
 UNKNOWN causal trigger
 ```
 
-Do not assign one global confidence label to the whole narrative.
+### Compare parallel machine state under sparse prose
 
-### 3. Compare machine-readable parallel state
-
-Sparse software history can expose consequential relations through:
+Useful pairs include:
 
 ```text
 manifest ↔ lockfile
 package-local ↔ workspace-root state
-test ↔ CI configuration
-current behavior ↔ introducing diff
+test ↔ CI/config
+current survivor ↔ introducing diff
 ```
 
-before any prose rationale is available.
+This can recover mechanism, not motive.
 
-### 4. Locate both history boundaries
+### Separate current necessity from historical trigger
 
 ```text
-RIGHT/CURRENT BOUNDARY
-    what currently survives / is integrated?
+CURRENT NECESSITY
+    why a relation matters in the present object
 
-LEFT/ARCHIVE BOUNDARY
-    how far back can surviving traces support formation claims?
+HISTORICAL TRIGGER
+    what event caused the relation to enter
 ```
 
-A strong right edge does not repair a missing left edge.
+Either may be known without the other.
 
-### 5. Preserve missing institutional semantics as missing
-
-Invoice Suite currently establishes integrated state on `master`. It does not establish a separate semantic admission operation comparable to Site C. Do not import one.
-
-## Current fourth-site standing
-
-The fourth site **does** materially change the shared method. It demonstrates that standing reconstruction can remain useful with sparse rationale if claim strength contracts to the surviving substrate.
-
-It also falsifies a latent assumption that first commit can stand in for design origin.
-
-What it does **not** yet establish:
+### Locate both temporal boundaries
 
 ```text
-how the method behaves under genuinely squashed history with few useful diffs
-how to treat conflicting contributor rationales
-how to treat autogenerated commit messages at scale
-how to reconstruct external issue/tracker causality when Git is thin
-whether a shared Estate archaeology owner is warranted
+RIGHT / CURRENT BOUNDARY
+    what currently survives / has standing?
+
+LEFT / ARCHIVE BOUNDARY
+    how far backward can formation claims be supported?
 ```
+
+### Split challenge routes
+
+```text
+GENEALOGICAL CHALLENGE
+    replay original evidence/disposition
+
+EXECUTABLE CHALLENGE
+    perturb current guard and test current consequence
+```
+
+The latter can remain available when the former is lost.
+
+## Cross-site transfer standing
+
+`transfer/001_four_site_method_pressure.md` compiles the delta against the prior three-site method.
+
+Fourth-site results:
+
+```text
+STRENGTHENED
+    inferential ceiling per relation
+    chronology/topology != causality/authority
+    source-native reconstruction
+
+NEW PORTABLE RELATIONS
+    archive horizon != formation origin
+    current necessity != historical trigger
+    machine-state comparison under sparse history
+    operative != genealogical negative knowledge
+    executable != genealogical challenge
+
+NOT APPLICABLE AT SITE D
+    separate semantic admission authority
+    typed authority-bearing identity
+    enacted non-owning admission gate
+```
+
+The fourth-site sparse-pressure condition previously nominated as a prerequisite for reconsidering shared Estate ownership is now materially satisfied.
+
+## Remaining weak edges
+
+```text
+genuinely squashed history with few useful diffs
+conflicting multi-contributor rationale
+autogenerated commit-message history at scale
+external issue/tracker causality with thin Git
+shared Estate placement and minimum authority surface
+fresh-runtime archaeology economics
+```
+
+These are different evidence classes; they should not be simulated inside Invoice Suite merely to fill coverage.
 
 ## Next operations
 
-1. compile the fourth-site correction into a portable cross-site delta rather than more local case accumulation;
-2. pressure one relation that was strong on the first three sites against this sparse substrate and record any narrowing/retirement;
-3. inspect PR/issue/review substrate only where a bounded question requires it;
-4. propagate only earned fourth-site corrections back to the existing archaeology sites;
-5. keep Invoice Suite archaeology branch-local unless product-side discoverability/admission becomes independently warranted.
+1. inspect exact-current Home/Estate authority for the minimum legitimate shared archaeology capability owner;
+2. if placement is earned, centralize only the portable method/standing/challenge relations, not source-site findings;
+3. propagate the fourth-site delta back to prior archaeology sites without rewriting their local findings;
+4. keep Invoice Suite archaeology branch-local unless its product institution independently needs a discoverability/admission route;
+5. select the next pressure site for a genuinely missing evidence class, not thematic similarity.
 
 ## Re-entry
 
 ```text
 README.md
 → CURRENT.md
-→ findings/001...003 as needed
+→ transfer/001_four_site_method_pressure.md when cross-site method matters
+→ findings/001...004 only as needed
 → process/OBSERVATIONS.md
-→ SOURCE_LEDGER.md only for exact traces
+→ SOURCE_LEDGER.md for exact traces
 ```
