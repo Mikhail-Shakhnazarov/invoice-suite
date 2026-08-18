@@ -44,6 +44,20 @@ No stronger internal authority graph is presumed unless exact traces establish i
 
 Archaeology may reconstruct state transitions and supported design/repair relations. It may not invent missing failure logs, private motives, review decisions, or admission semantics absent from this repository.
 
+## Current Estate method route
+
+Site D changed the shared method enough to earn a Home causal amendment. Current Estate-wide method execution should therefore use:
+
+```text
+Mikhail-Shakhnazarov/home
+main@955eb7dc30aec0de7a4fc98b77e01193377963f6
+
+private corpus/methodology/method_archaeology.md
+→ private corpus/methodology/method_archaeology_addendum_2026-08-18_four_site_sparse_history.md
+```
+
+This branch remains the source evidence for the sparse-history pressure. It is not a second shared-method owner.
+
 ## Evidence standing
 
 ```text
@@ -57,44 +71,68 @@ UNKNOWN
     surviving substrate does not warrant stronger reconstruction
 ```
 
-Sparse history should increase UNKNOWN, not lower the evidentiary threshold.
+Sparse history should increase UNKNOWN, not lower the evidentiary threshold. Standing is assigned per load-bearing relation, so exact transition confidence can exceed causal-rationale confidence inside one finding.
 
-## Initial pressure object
+## Formed pressure objects
 
-Recover how browser-dependent PDF generation became executable in CI.
-
-Current CI installs Puppeteer Chrome for both CLI tests and demo PDF generation. Current CLI tests invoke PDF generation directly. The recent sparse commit chain includes branch-trigger repair, Ubuntu dependency repair, Puppeteer/lockfile reconciliation, Chrome installation for the demo job, then Chrome installation for the test job.
-
-The archaeology must separate:
+The initial CI question produced four bounded findings:
 
 ```text
-what changed
-from
-why it changed
+001  sparse CI repairs recover mechanism more strongly than trigger/rationale
+002  initial formed architecture rationale is not formation genealogy
+003  first visible repository state is an archive horizon, not formation origin
+004  operative negative knowledge can survive after genealogical failure trace is lost
 ```
 
-when only the first is strongly preserved.
+`transfer/001_four_site_method_pressure.md` compiles the resulting method changes.
 
 ## Site order
 
 ```text
 1. current product/workflow/test surface
 2. exact diff sequence
-3. commit message as limited contemporaneous interpretation
-4. README/CHANGELOG only for current design description
-5. UNKNOWN where logs/rationale are absent
+3. parallel machine-state comparison where it bears
+4. commit message as limited contemporaneous interpretation
+5. README/CHANGELOG for current/design-state claims
+6. archive-horizon check at earliest surviving state
+7. UNKNOWN where logs/rationale/prehistory are absent
 ```
 
-Commit messages nominate motive; they do not make an opaque diff self-explanatory.
+Commit messages nominate motive; they do not make an opaque diff self-explanatory. Current executable necessity does not establish historical trigger.
+
+## What transferred
+
+```text
+trace bundle as interrogation relations, not mandatory fields
+per-relation OBSERVED / SUPPORTED INFERENCE / UNKNOWN
+CURRENT NECESSITY != HISTORICAL TRIGGER
+archive horizon != formation origin
+machine-state comparison under sparse prose
+OPERATIVE != GENEALOGICAL NEGATIVE KNOWLEDGE
+EXECUTABLE != GENEALOGICAL CHALLENGE
+NOT APPLICABLE as positive transfer standing
+```
+
+## What did not transfer into Site D
+
+```text
+separate semantic admission authority
+typed authority-bearing semantic identity
+enacted non-owning semantic pressure/admission gate
+```
+
+Their absence should remain absence rather than being simulated with ordinary Git/CI nouns.
 
 ## Re-entry
 
 ```text
 README.md
 → CURRENT.md
-→ one bounded finding
-→ SOURCE_LEDGER.md for exact traces
-→ process/OBSERVATIONS.md for method pressure
+→ transfer/001_four_site_method_pressure.md for cross-site genealogy
+→ one bounded finding as needed
+→ SOURCE_LEDGER.md for exact Site-D traces
+→ process/OBSERVATIONS.md for sparse-history method pressure
+→ Home parent + current addendum for Estate-wide method execution
 ```
 
 Do not retrofit Site-A/B/C governance nouns onto this repository.
